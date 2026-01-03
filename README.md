@@ -25,7 +25,7 @@ de forma prática.
 ### Passos
 No Terminal:
 ```bash
-git clone https:https://github.com/MiguelO1iveira/permissoes-bitwise-java.git
+git clone https://github.com/MiguelO1iveira/permissoes-bitwise-java.git
 cd permissoes-bitwise-java
 javac src/Main.java
 java -cp src Main
