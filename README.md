@@ -28,4 +28,4 @@ No Terminal:
 git clone https://github.com/MiguelOliveira/permissoes-bitwise-java.git
 cd permissoes-bitwise-java
 javac src/Main.java
-java src/Main.java
+java -cp src Main
