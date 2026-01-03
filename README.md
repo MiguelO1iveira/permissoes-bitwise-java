@@ -18,6 +18,14 @@ de forma prática.
 - Estruturas de controle (switch, loop)
 
 ## ▶️ Como executar
-1. Compile o arquivo:
+### Pré-requisitos
+- Java JDK instalado
+- Terminal (CMD, PowerShell, Git Bash ou Linux/macOS)
+
+### Passos
+No Terminal:
 ```bash
-javac Permissoes.java
+git clone https://github.com/MiguelOliveira/permissoes-bitwise-java.git
+cd permissoes-bitwise-java
+javac src/Main.java
+java src/Main.java
