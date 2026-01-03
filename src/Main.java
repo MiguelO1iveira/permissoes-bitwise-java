@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class Main {
-	private final static int READ = 1; // 0001
-	private final static int WRITE = 2; // 0010
-	private final static int EXEC = 4; // 0100
+	private final static int READ = 1; // 001
+	private final static int WRITE = 2; // 010
+	private final static int EXEC = 4; // 100
 
 	public static void main(String[] args) {
 		
@@ -36,12 +36,12 @@ public class Main {
 						break;
 						
 					case 1:
-						if ((perm & READ) != 0) {
+						if ((perm & READ) != 0) { // Comparação para saber se o usuário já possui aquela permissão
 							System.out.println("Usuário já possui permissão!");
 						} else {
 							System.out.println("Permissão de Leitura concedida!");
 							
-							perm |= READ;
+							perm |= READ; // Mantém as permissões que o usuário já possui e acrescenta a nova
 						}
 						scanner.nextLine(); //Para dar tempo de ver a resposta
 						break;
@@ -67,13 +67,28 @@ public class Main {
 						scanner.nextLine();
 						break;
 					case 4:
-						if ((perm & READ) == 0) {
+						if ((perm & READ) == 0) { // Verifica se o usuário não a permissão
 							System.out.println("Usuário não possui permissão!");
 						} else {
 						
 							System.out.println("Permissão de Leitura removida!");
 							
-							perm &= ~READ;
+							perm &= ~READ; 
+							/* Se o usuário tiver a permissão, essa linha de comando serve para remover
+							 * Exemplo: 
+							 * Permissão do usuário  = 111
+							 * Valor Binário do READ = 001
+							 * 
+							 * Se (perm & READ) vai resultar em 001 que vai retornar false na primeira condição, então vai executar
+							 * o else. No else ele vai pegar a permissão = 111 e comparar com o inverso do READ ficado assim:
+							 * 
+							 * 111 & ~(001) -> 111 & 110 
+							 * resultado da comparação = 110
+							 * 
+							 * Ou seja, ele vai respeitar os valores anteriores, mas vai remover a permissão selecionada
+							 * 
+							 * */
+							
 						}
 						scanner.nextLine();
 						break;
@@ -123,7 +138,7 @@ public class Main {
 						
 				}
 				
-			} while (op != 0); // Teste simples para garantir que o usuário digite certo
+			} while (op != 0); // Se a opção digitada for igual a 0, ele encerra o laço
 			
 			
 		}
