@@ -12,11 +12,11 @@ public class Main {
 			int op = 0;
 			int perm = 0;
 			
-			System.out.println("EXERCÍCIO PARA FIXAR O CONTEÚDO DA AULA SOBRE BITWISE!\n");
+			System.out.println("\nEXERCÍCIO PARA FIXAR O CONTEÚDO DA AULA SOBRE BITWISE!\n");
 			
 			do {
 				// MENU PRINCIPAL
-				System.out.println("\n================== MENU ==================");
+				System.out.println("================== MENU ==================");
 				System.out.println("[1] Dar permissão de leitura.");
 				System.out.println("[2] Dar permissão de escrita.");
 				System.out.println("[3] Dar permissão de execução.");
