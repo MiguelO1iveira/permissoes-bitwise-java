@@ -26,6 +26,13 @@ de forma prática.
 No Terminal:
 ```bash
 git clone https://github.com/MiguelO1iveira/permissoes-bitwise-java.git
+```
+```bash
 cd permissoes-bitwise-java
+```
+```bash
 javac src/Main.java
+```
+```bash
 java -cp src Main
+```
