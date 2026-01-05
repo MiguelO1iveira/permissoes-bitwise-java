@@ -64,6 +64,7 @@ public class Main {
 						}
 						scanner.nextLine();
 					}
+					
 					case 4 -> {
 						if ((perm & READ) == 0) { // Verifica se o usuário não a permissão
 							System.out.println("Usuário não possui permissão!");
@@ -132,7 +133,7 @@ public class Main {
 					default -> {
 						System.out.println("[ERRO] Digite um número entre 1 e 7!");
 						scanner.nextLine();
-				}
+					}
 						
 				}
 				
