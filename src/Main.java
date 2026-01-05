@@ -31,11 +31,9 @@ public class Main {
 				
 				switch (op) {
 				// Aqui vai analisar e executar as instruções de acordo com o que o utilizador digitou
-					case 0:
-						System.out.println("Encerrando...");
-						break;
+					case 0 -> System.out.println("Encerrando...");
 						
-					case 1:
+					case 1 -> {
 						if ((perm & READ) != 0) { // Comparação para saber se o usuário já possui aquela permissão
 							System.out.println("Usuário já possui permissão!");
 						} else {
@@ -44,9 +42,9 @@ public class Main {
 							perm |= READ; // Mantém as permissões que o usuário já possui e acrescenta a nova
 						}
 						scanner.nextLine(); //Para dar tempo de ver a resposta
-						break;
+					}
 						
-					case 2:
+					case 2 -> {
 						if ((perm & WRITE) != 0) {
 							System.out.println("Usuário já possui permissão!");
 						} else {
@@ -55,9 +53,9 @@ public class Main {
 							perm |= WRITE;
 						}
 						scanner.nextLine();
-						break;
+					}
 						
-					case 3:
+					case 3 -> {
 						if ((perm & EXEC) != 0) {
 							System.out.println("Usuário já possui permissão!");
 						} else {
@@ -65,8 +63,8 @@ public class Main {
 							perm |= EXEC;
 						}
 						scanner.nextLine();
-						break;
-					case 4:
+					}
+					case 4 -> {
 						if ((perm & READ) == 0) { // Verifica se o usuário não a permissão
 							System.out.println("Usuário não possui permissão!");
 						} else {
@@ -91,9 +89,9 @@ public class Main {
 							
 						}
 						scanner.nextLine();
-						break;
+					}
 						
-					case 5:
+					case 5 -> {
 						if ((perm & WRITE) == 0) {
 							System.out.println("Usuário não possui permissão!");
 						} else {
@@ -101,9 +99,9 @@ public class Main {
 							perm &= ~WRITE;
 						}
 						scanner.nextLine();
-						break;
+					}
 						
-					case 6:
+					case 6 -> {
 						if ((perm & EXEC) == 0) {
 							System.out.println("Usuário não possui permissão!");
 						} else {
@@ -111,9 +109,9 @@ public class Main {
 							perm &= ~EXEC;
 						}
 						scanner.nextLine();
-						break;
+					}
 						
-					case 7:
+					case 7 -> {
 						System.out.println("\n==========================================");
 						System.out.println("PERMISSÕES DO USUÁRIO: ");
 						if (perm == 0) {
@@ -129,12 +127,12 @@ public class Main {
 						}
 							
 						scanner.nextLine();
-						break;
+					}
 						
-					default:
+					default -> {
 						System.out.println("[ERRO] Digite um número entre 1 e 7!");
 						scanner.nextLine();
-						break;
+				}
 						
 				}
 				
